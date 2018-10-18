@@ -195,22 +195,22 @@ def index_of_largest_number(numbers, n):
 
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
-    num = numbers[0]
-    k = 0
-    n = n
+    first_index = numbers[0]
+    index = 0
 
     for i in range(1, n):
-        if numbers[i] == num:
-            if k > i:
-                num = numbers[i]
-                k = i
-        if num < numbers[i]:
-            k = i
-    return k
+        if first_index < numbers[i]:
+            first_index = numbers[i]
+            index = i
+        if first_index == numbers[i]:
+            if index > i:
+                index = i
+    return index
+
 
 
 
